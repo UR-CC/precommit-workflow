@@ -1,0 +1,28 @@
+repos:
+
+  # hooks genéricos
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace      # elimina los espacios al final
+      - id: end-of-file-fixer        # deja una linea en blanco al final
+      - id: check-yaml               # valida los archivos .yaml
+      - id: check-added-large-files  # rechaza archivos grandes
+
+  # Ruff: linting, formateo
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.6
+    hooks:
+      - id: ruff
+        args: [ --fix ]   # corregir automaticamente lo que se pueda
+      - id: ruff-format
+
+  # Pytest
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: pytest
+        language: system
+        pass_filenames: false
+        always_run: true

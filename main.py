@@ -1,4 +1,4 @@
-def suma(a: float, b:float) -> float:
+def suma(a: float, b: float) -> float:
     """
     Calcula la suma de dos números
 
@@ -15,7 +15,8 @@ def suma(a: float, b:float) -> float:
         >>> suma(-1, 1)
         0.0
     """
-    return float(a / b)
+    return float(a + b)
+
 
 def es_par(n: int) -> bool:
     """
@@ -34,6 +35,7 @@ def es_par(n: int) -> bool:
         False
     """
     return (n % 2) == 0
+
 
 if __name__ == "__main__":
     print(f"la suma de 5 + 3 = {suma(5, 3)}")
