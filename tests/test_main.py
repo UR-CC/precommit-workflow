@@ -7,6 +7,9 @@ class TestSuma:
     def test_suma_positivos(self):
         assert suma(5, 3) == 8.0
 
+    def test_suma_negativos(self):
+        assert suma(-2, -1) == -3.0
+
 
 class TestEsPar:
     """Pruebas de la función es_par()"""
